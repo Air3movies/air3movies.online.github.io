@@ -92,11 +92,10 @@ footer {
 }
 /* Responsive adjustments for Suggestion page */
 .container {
-    width: 80%;
+    width: 60%;
     margin: 50px auto;
-    background-color: #f9f9f9;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 form {
@@ -110,7 +109,7 @@ textarea {
     margin-bottom: 20px;
     padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 8px;
     font-size: 16px;
 }
 
@@ -124,7 +123,7 @@ input[type="submit"] {
     background-color: #007bff;
     color: #fff;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 16px;
     transition: background-color 0.3s ease;
 }
@@ -148,8 +147,8 @@ footer {
 
 .back-button a {
     text-decoration: none;
-    color: #007bff;
-    font-size: 16px;
+    color: black;
+    
 }
 
 .back-button a:hover {
