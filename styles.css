@@ -8,7 +8,7 @@ body, h1, h2, h3, p, ul {
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
-    background-image: url('Background 4.jpg'); /* update*/
+    background-image: url("Background 4.jpg"); /* update*/
 }
 
 header {
