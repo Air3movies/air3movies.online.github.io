@@ -262,42 +262,51 @@ footer {
     width: 100%;
 }
 /* Responsive adjustments for movies page */
+/* Responsive adjustments for movies page */
 @media screen and (max-width: 1024px) {
-    /* Tablet sizes */
     main {
         flex-direction: column;
         align-items: center;
     }
+
     .filter-box {
         flex-wrap: wrap;
         justify-content: center;
     }
+
     .filter-btn {
         margin: 5px;
         padding: 5px 10px;
         font-size: 14px;
     }
+
     .search-container {
         margin-bottom: 10px;
     }
+
     .search-container input {
         width: 100%;
         padding: 8px;
         font-size: 14px;
     }
+
     .movie-list {
         padding: 0;
         margin: 0;
     }
+
     .movie-list li {
         width: 80%;
         margin: 10px auto;
         text-align: center;
     }
+
     .movie-list img {
         width: 100%;
         height: auto;
+        border-radius: 10px; /* Added border-radius for rounded corners */
     }
+
     .movie-list a {
         display: block;
         margin-top: 5px;
@@ -306,112 +315,39 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    /* Small tablets and landscape mobile */
     .filter-btn {
         padding: 4px 8px;
         font-size: 12px;
     }
+
     .search-container input {
         font-size: 12px;
     }
+
     .movie-list li {
         width: 90%;
     }
+
     .movie-list a {
         font-size: 14px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    /* Mobile portrait */
     .filter-btn {
         padding: 3px 6px;
         font-size: 10px;
     }
+
     .search-container input {
         font-size: 10px;
     }
+
     .movie-list li {
         width: 95%;
     }
+
     .movie-list a {
-        font-size: 12px;
-    }
-}
-/* Responsive adjustments for Series page */
-@media screen and (max-width: 1024px) {
-    /* Tablet sizes */
-    main {
-        flex-direction: column;
-        align-items: center;
-    }
-    .filter-box {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .filter-btn {
-        margin: 5px;
-        padding: 5px 10px;
-        font-size: 14px;
-    }
-    .search-container {
-        margin-bottom: 10px;
-    }
-    .search-container input {
-        width: 100%;
-        padding: 8px;
-        font-size: 14px;
-    }
-    .series-list {
-        padding: 0;
-        margin: 0;
-    }
-    .series-list li {
-        width: 80%;
-        margin: 10px auto;
-        text-align: center;
-    }
-    .series-list img {
-        width: 100%;
-        height: auto;
-    }
-    .series-list a {
-        display: block;
-        margin-top: 5px;
-        font-size: 16px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    /* Small tablets and landscape mobile */
-    .filter-btn {
-        padding: 4px 8px;
-        font-size: 12px;
-    }
-    .search-container input {
-        font-size: 12px;
-    }
-    .series-list li {
-        width: 90%;
-    }
-    .series-list a {
-        font-size: 14px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    /* Mobile portrait */
-    .filter-btn {
-        padding: 3px 6px;
-        font-size: 10px;
-    }
-    .search-container input {
-        font-size: 10px;
-    }
-    .series-list li {
-        width: 95%;
-    }
-    .series-list a {
         font-size: 12px;
     }
 }
