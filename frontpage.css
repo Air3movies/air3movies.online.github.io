@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
-    background-image: url('/Gallary/Background.jpg'); /* Replace 'your-background-image.jpg' with the path to your image */
+    background-image: url(/Air3movies/Gallary/Background.jpg); /* Replace 'your-background-image.jpg' with the path to your image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
