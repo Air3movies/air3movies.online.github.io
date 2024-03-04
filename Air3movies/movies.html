@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Streaming Website - Movies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Movies</h1>
+        <a href="/Air3movies/Opening.html">Back to Home</a>
+    </header>
+
+    <!-- Filter box for alphabets -->
+    <div class="filter-box">
+        <button class="filter-btn" onclick="filterMovies('All')">All</button>
+        <button class="filter-btn" onclick="filterMovies('A')">A</button>
+        <button class="filter-btn" onclick="filterMovies('B')">B</button>
+        <button class="filter-btn" onclick="filterMovies('C')">C</button>
+        <button class="filter-btn" onclick="filterMovies('D')">D</button>
+        <button class="filter-btn" onclick="filterMovies('E')">E</button>
+        <button class="filter-btn" onclick="filterMovies('F')">F</button>
+        <button class="filter-btn" onclick="filterMovies('G')">G</button>
+        <button class="filter-btn" onclick="filterMovies('H')">H</button>
+        <button class="filter-btn" onclick="filterMovies('I')">I</button>
+        <button class="filter-btn" onclick="filterMovies('J')">J</button>
+        <button class="filter-btn" onclick="filterMovies('K')">K</button>
+        <button class="filter-btn" onclick="filterMovies('L')">L</button>
+        <button class="filter-btn" onclick="filterMovies('M')">M</button>
+        <button class="filter-btn" onclick="filterMovies('N')">N</button>
+        <button class="filter-btn" onclick="filterMovies('O')">O</button>
+        <button class="filter-btn" onclick="filterMovies('P')">P</button>
+        <button class="filter-btn" onclick="filterMovies('Q')">Q</button>
+        <button class="filter-btn" onclick="filterMovies('R')">R</button>
+        <button class="filter-btn" onclick="filterMovies('S')">S</button>
+        <button class="filter-btn" onclick="filterMovies('T')">T</button>
+        <button class="filter-btn" onclick="filterMovies('U')">U</button>
+        <button class="filter-btn" onclick="filterMovies('V')">V</button>
+        <button class="filter-btn" onclick="filterMovies('W')">W</button>
+        <button class="filter-btn" onclick="filterMovies('X')">X</button>
+        <button class="filter-btn" onclick="filterMovies('Y')">Y</button>
+        <button class="filter-btn" onclick="filterMovies('Z')">Z</button>
+        <!-- Add buttons for other alphabets as needed -->
+    </div>
+
+    <!-- Search bar -->
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for movies...">
+    </div>
+
+    <main>
+        <ul class="movie-list">
+            <!-- Movie titles will be dynamically generated here -->
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 AIR3MOVIES Streaming Website. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Array of movie data with title and URL
+            var movies = [
+                { title: "The Beekeeper (2024)", url: "https://drive.google.com/file/d/13hMBG2N2iHwQ-PR40EhWhcpNTTLFzcdB/view?usp=drive_link" },
+                { title: "Megamind.vs.The.Doom.Syndicate.(2024)", url: "https://drive.google.com/file/d/1yXWQ1SRWE5-f8WwSS4Ch-948JwREspDp/view?usp=drive_link" },
+                { title: "Code 8 part 2 (2024)", url: "https://drive.google.com/file/d/1TUdByHL7haJe1Xi6mrSAL_J06QkGAQo_/view?usp=drive_link" },
+                { title: "Red Right Hand (2024)", url: "https://drive.google.com/file/d/1qaDcKOWb1nsBDdXpVYhM0rzH43oClH7l/view?usp=drive_link" },
+                { title: "Mea Culpa (2024)", url: "#" },
+                { title: "Spaceman (2024)", url: "https://drive.google.com/file/d/12VFZoGKVhlRlmghnY36Rohzn5OwPePnu/view?usp=drive_link" },
+                { title: "Lisa Frankenstein (2024)", url: "https://drive.google.com/file/d/1APvxgxfkVaZPEhhC8GIbS6XrtsNARccp/view?usp=drive_link" },
+                { title: "#", url: "#" },
+                { title: "#", url: "#" },
+                { title: "#", url: "#" },
+                { title: "#", url: "#" },
+                { title: "#", url: "#" },
+                { title: "#", url: "#" },
+                // Add more movie objects here
+            ];
+
+            // Get the movie list container
+            var movieList = document.querySelector(".movie-list");
+
+            // Dynamically generate movie titles with images
+            movies.forEach(function(movie) {
+                var listItem = document.createElement("li");
+                var link = document.createElement("a");
+                link.href = movie.url; // Set the URL for each movie title
+                link.textContent = movie.title;
+
+                // Create an image element
+                var image = document.createElement("img");
+                image.src = "Movies/" + movie.title + "/" + movie.title.toLowerCase() + "_1.jpg"; // Assuming the first image is named "movie_title_1.jpg"
+                image.alt = movie.title + " Poster"; // Set alt text for accessibility
+
+                // Append the image and link to the list item
+                listItem.appendChild(image);
+                listItem.appendChild(link);
+                movieList.appendChild(listItem);
+            });
+        });
+
+        // Function to filter movies based on alphabet
+        function filterMovies(alphabet) {
+            var movieItems = document.querySelectorAll(".movie-list li");
+            movieItems.forEach(function(item) {
+                var title = item.textContent.trim();
+                if (alphabet === "All" || title.charAt(0).toUpperCase() === alphabet) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        }
+
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', function() {
+            var searchValue = this.value.trim().toLowerCase();
+            var movieItems = document.querySelectorAll('.movie-list li');
+
+            movieItems.forEach(function(item) {
+                var title = item.textContent.trim().toLowerCase();
+                if (title.includes(searchValue)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
