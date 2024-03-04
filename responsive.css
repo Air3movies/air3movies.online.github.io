@@ -1,0 +1,44 @@
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+    /* Tablet sizes */
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+    .option {
+        width: 150px;
+        height: 150px;
+    }
+    /* Adjust font sizes and padding for readability */
+    header, footer {
+        font-size: 18px;
+        padding: 10px;
+    }
+    .options {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Small tablets and landscape mobile */
+    .option {
+        width: 120px;
+        height: 120px;
+    }
+    header, footer {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Mobile portrait */
+    .option {
+        width: 100px;
+        height: 100px;
+    }
+    header, footer {
+        font-size: 14px;
+        padding: 5px;
+    }
+}
