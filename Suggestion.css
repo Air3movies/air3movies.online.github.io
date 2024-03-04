@@ -94,9 +94,8 @@ footer {
 .container {
     width: 60%;
     margin: 50px auto;
-    background-color: #f9f9f9;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 form {
@@ -110,7 +109,7 @@ textarea {
     margin-bottom: 10px;
     padding: 8px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
 input[type="submit"] {
@@ -119,7 +118,7 @@ input[type="submit"] {
     background-color: #007bff;
     color: #fff;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
 input[type="submit"]:hover {
@@ -140,7 +139,7 @@ footer {
 
 .back-button a {
     text-decoration: none;
-    color: #007bff;
+    color: black;
 }
 
 .back-button a:hover {
