@@ -17,6 +17,13 @@
     .options {
         flex-wrap: wrap;
     }
+    .option h2 {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    .option p {
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -29,6 +36,13 @@
         font-size: 16px;
         padding: 8px;
     }
+    .option h2 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    .option p {
+        font-size: 12px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -40,5 +54,12 @@
     header, footer {
         font-size: 14px;
         padding: 5px;
+    }
+    .option h2 {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    .option p {
+        font-size: 10px;
     }
 }
