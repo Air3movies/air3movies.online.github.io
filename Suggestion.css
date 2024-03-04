@@ -92,10 +92,11 @@ footer {
 }
 /* Responsive adjustments for Suggestion page */
 .container {
-    width: 60%;
+    width: 80%;
     margin: 50px auto;
+    background-color: #f9f9f9;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 form {
@@ -106,19 +107,26 @@ form {
 input[type="text"],
 input[type="email"],
 textarea {
-    margin-bottom: 10px;
-    padding: 8px;
+    margin-bottom: 20px;
+    padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing of textarea */
 }
 
 input[type="submit"] {
-    padding: 10px;
+    padding: 12px 20px;
     border: none;
     background-color: #007bff;
     color: #fff;
     cursor: pointer;
-    border-radius: 6px;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
 input[type="submit"]:hover {
@@ -129,6 +137,7 @@ footer {
     text-align: center;
     margin-top: 20px;
     color: #666;
+    font-size: 14px;
 }
 
 /* Back button */
@@ -139,7 +148,8 @@ footer {
 
 .back-button a {
     text-decoration: none;
-    color: black;
+    color: #007bff;
+    font-size: 16px;
 }
 
 .back-button a:hover {
