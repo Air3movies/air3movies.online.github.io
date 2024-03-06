@@ -16,7 +16,28 @@ header {
     color: #fff;
     padding: 20px;
     text-align: center;
-    margin-bottom: 20px; /* Add space between header and filter box */
+    margin-bottom: 10px; /* Add space between header and filter box */
+}
+
+header h1 {
+    font-size: 28px; /* Increase title font size */
+    margin-bottom: 10px;
+    border: 2px solid #fff; /* Box the title */
+    padding: 5px 10px; /* Add padding to the title */
+    display: inline-block; /* Ensure the title does not move over other elements */
+}
+
+header a {
+    color: #20e429;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: aqua;
+}
+
+main {
+    padding: 20px;
 }
 
 nav {
@@ -44,39 +65,45 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
-/* Styles for the movie list */
-.movie-list {
+
+/* Styles for the movie list and series list */
+.movie-list, .series-list {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Center the movie list horizontally */
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Align items to the top */
 }
 
-/* Styles for individual movie items */
-
-.movie-list li {
+/* Styles for individual movie and series items */
+.movie-list li, .series-list li {
     width: calc(25% - 20px); /* Adjust width for smaller screens */
-    margin: 10px; /* Add margin to create space between movie items */
+    margin: 10px; /* Add margin to create space between items */
     text-align: center;
+    display: flex;
+    flex-direction: column; /* Ensure items stack vertically */
+    align-items: center; /* Center items horizontally */
 }
 
-/* Styles for the movie title */
-.movie-list li a {
+/* Styles for the movie and series title */
+.movie-list li a, .series-list li a {
     display: block;
     width: 100%; /* Ensure the title takes up full width */
+    font-size: large;
+    color: white;
 }
 
 /* Styles for the image */
-.movie-list img {
-    width: 100%; /* Set the width to fill the container */
+.movie-list img, .series-list img {
+    width: 50%; /* Make images slightly smaller */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 10px; /* Add border radius for rounded corners */
+    border-radius: 50px; /* Add border radius for rounded corners */
 }
 
 /* Styles for the alphabet filter */
@@ -89,76 +116,11 @@ footer {
     margin-right: 5px; /* Add some space between the filter buttons */
     border-radius: 20%;
 }
-.filter-btn:hover{
+
+.filter-btn:hover {
     background-color: aqua;
     border-radius: 40%;
 }
-/* Styles for the search container */
-.search-container {
-    margin-bottom: 20px; /* Add some space below the search bar */
-    text-align: right; /* Align the search bar to the right */
-}
-
-.search-container input[type="text"] {
-    padding: 10px;
-    width: 200px; /* Set the width of the search bar */
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-size: 12px;
-}
-
-/* Styles for the alphabet filter */
-.filter-box {
-    margin-bottom: 20px; /* Add some space below the filter box */
-}
-
-.filter-btn {
-    margin-right: 5px; /* Add some space between the filter buttons */
-}
-/* Styles for the series list */
-.series-list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center the movie list horizontally */
-}
-
-/* Styles for individual series items */
-.series-list li {
-    width: calc(20% - 20px); /* 20% width with space between elements */
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center items vertically */
-    text-align: center; /* Center items horizontally */
-}
-
-/* Styles for the series title links */
-.series-list li a {
-    display: block;
-    width: 100%; /* Ensure the title takes up full width */
-}
-
-/* Style for series images */
-.series-list li img {
-    width: auto; /* Set the width to auto to maintain aspect ratio */
-    max-height: 200px; /* Set a maximum height for the images */
-    margin-bottom: 10px; /* Add some space between the image and movie title */
-    border-radius: 10%;
-}
-
-/* Styles for the alphabet filter */
-.filter-box {
-    text-align: center;
-    margin-bottom: 20px; /* Add some space below the filter box */
-}
-
-/* Styles for the alphabet filter buttons */
-.filter-btn {
-    margin-right: 5px; /* Add some space between the filter buttons */
-}
 
 /* Styles for the search container */
 .search-container {
@@ -174,187 +136,38 @@ footer {
     box-sizing: border-box;
     font-size: 12px;
 }
-/* Reset default margin and padding */
-body, h1, h2, h3, p, ul {
-    margin: 0;
-    padding: 0;
+
+/* Additional filter buttons */
+.filter-btn {
+    margin-right: 5px; /* Add some space between the filter buttons */
+    border-radius: 20%;
 }
 
-/* Basic styling */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+.filter-btn:hover {
+    background-color: aqua;
+    border-radius: 40%;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-header h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-header a {
-    color: #fff;
-    text-decoration: none;
-}
-header a:hover {
-    color: aqua;
-}
-
-main {
-    padding: 20px;
-}
-
-.episode-list {
-    list-style:none;
-    padding: 0;
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: center; /* Center episodes horizontally */
-}
-
-.episode-list li {
-    margin: 5px; /* Add space between episodes */
-    padding: 10px; /* Add padding to each episode */
-    /* border: 1px solid #ccc; Add border for visual separation */
-}
-
-@media (min-width: 768px) {
-    .episode-list li {
-        width: calc(33.33% - 10px); /* Adjust width for larger screens */
-    }
-}
-.episode-list li a {
-    display: block;
-    padding: 10px;
-    background-color: #666;
-    color: #fff;
-    text-decoration: none;
-    text-align: center;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.episode-list li a:hover {
-    background-color:aqua;
-    color: black;
-    transition: background-color 0.3s ease;
-    text-align: center;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-/* Responsive adjustments for movies page */
-/* Responsive adjustments for movies page */
-@media screen and (max-width: 1024px) {
-    main {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .filter-box {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .filter-btn {
-        margin: 5px;
-        padding: 5px 10px;
-        font-size: 14px;
-    }
-
-    .search-container {
-        margin-bottom: 10px;
-    }
-
-    .search-container input {
-        width: 100%;
-        padding: 8px;
-        font-size: 14px;
-    }
-
-    .movie-list {
-        padding: 0;
-        margin: 0;
-        
-    }
-
-    .movie-list li {
-        width: 80%;
-        margin: 10px auto;
-        text-align: center;
-    }
-
-    .movie-list img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px; /* Added border-radius for rounded corners */
-    }
-
-    .movie-list a {
-        display: block;
-        margin-top: 5px;
-        font-size: 16px;
-    }
-    footer{
-        position: relative;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .filter-btn {
-        padding: 4px 8px;
-        font-size: 12px;
-    }
-
-    .search-container input {
-        font-size: 12px;
-    }
-
-    .movie-list li {
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .movie-list li, .series-list li {
         width: calc(33.33% - 20px); /* Adjust width for smaller screens */
     }
+}
 
-    .movie-list a {
-        font-size: 14px;
-    }
-    footer{
-        position: relative;
+@media (max-width: 768px) {
+    .movie-list li, .series-list li {
+        width: calc(50% - 20px); /* Adjust width for even smaller screens */
     }
 }
 
-@media screen and (max-width: 480px) {
-    .filter-btn {
-        padding: 3px 6px;
-        font-size: 10px;
+@media (max-width: 480px) {
+    .movie-list li, .series-list li {
+        width: calc(100% - 20px); /* Adjust width for very small screens */
     }
+}
 
-    .search-container input {
-        font-size: 10px;
-    }
-
-    .movie-list li {
-        width: calc(50% - 20px); /* Adjust width for even smaller screens */
-    }
-
-    .movie-list a {
-        font-size: 12px;
-    }
-    footer{
-        position: relative;
-    }
+/* Hover effect for movie and series titles */
+.movie-list li a:hover, .series-list li a:hover {
+    color: aqua;
 }
