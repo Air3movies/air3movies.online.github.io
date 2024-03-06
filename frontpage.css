@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #3c3f43;
-    background-image:url("Background.jpg");
+    background-image:url("/Air3movies/Gallary/Background.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -43,7 +43,7 @@ header, footer {
     color: #fff;
     padding: 20px;
     margin: 10px; /* Adjust margin for spacing between options */
-    border-radius: 50%;
+    border-radius: 10%;
     text-align: center;
     width: calc(25% - 20px); /* Calculate width dynamically for equal spacing */
     max-width: 200px; /* Set maximum width for options */
@@ -60,6 +60,7 @@ header, footer {
 .option:hover {
     background-color: #020d0f;
     box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.5);
+    color: #00FF00;
 }
 
 .option h2 {
@@ -70,10 +71,67 @@ header, footer {
 .option p {
     font-size: 16px;
 }
-
-/* Media queries for responsiveness */
-@media screen and (max-width: 768px) {
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+    /* Tablet sizes */
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
     .option {
-        width: calc(50% - 20px); /* Adjust width for smaller screens */
+        width: 150px;
+        height: 150px;
+    }
+    /* Adjust font sizes and padding for readability */
+    header, footer {
+        font-size: 18px;
+        padding: 10px;
+    }
+    .options {
+        flex-wrap: wrap;
+    }
+    .option h2 {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    .option p {
+        font-size: 14px;
     }
 }
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    /* Small tablets and landscape mobile */
+    .option {
+        width: 120px;
+        height: 120px;
+    }
+    header, footer {
+        font-size: 16px;
+        padding: 8px;
+    }
+    .option h2 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    .option p {
+        font-size: 12px;
+    }
+}
+    @media screen and (max-width: 480px) {
+        /* Mobile portrait */
+        .option {
+            width: 100px;
+            height: 100px;
+        }
+        header, footer {
+            font-size: 14px;
+            padding: 5px;
+        }
+        .option h2 {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .option p {
+            font-size: 10px;
+        }
+    }
