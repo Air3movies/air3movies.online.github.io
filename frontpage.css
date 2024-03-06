@@ -1,25 +1,37 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #3c3f43;
-    background-image:url("Background.jpg"); /* Replace 'your-background-image.jpg' with the path to your image */
+    background-image:url("Background.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    margin: 0; /* Reset default margin */
+    padding: 0; /* Reset default padding */
 }
+
 /* Front page styling */
 main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 150px); /* Adjust based on header and footer height */
+    min-height: calc(100vh - 150px); /* Adjust based on header and footer height */
 }
+
 header, footer {
-    color: #fff; /* Set font color to white */
-    padding: 5px;
+    color: #fff;
+    padding: 10px; /* Increase padding for better spacing */
     text-align: center;
+    width: 100%; /* Take full width of the screen */
+    background-color: rgba(0, 0, 0, 0.5); /* Add background color with some transparency */
 }
+
 .options {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow options to wrap to next line if needed */
+    margin-top: 20px; /* Add some space between header and options */
+    margin-bottom: 20px; /* Add some space between options and footer */
 }
 
 .option-link {
@@ -28,25 +40,26 @@ header, footer {
 
 .option {
     background-color: #0a46e9;
-    color: #0b0e0b;
+    color: #fff;
     padding: 20px;
-    margin: 20px;
+    margin: 10px; /* Adjust margin for spacing between options */
     border-radius: 50%;
     text-align: center;
-    width: 200px;
+    width: calc(25% - 20px); /* Calculate width dynamically for equal spacing */
+    max-width: 200px; /* Set maximum width for options */
+    min-width: 150px; /* Set minimum width for options */
     height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effect */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0); /* Initial box shadow */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0);
 }
 
 .option:hover {
-    background-color: #020d0f; /* Darker background color on hover */
-    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.5); /* Glow effect on hover */
-    color:#24db2d;
+    background-color: #020d0f;
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.5);
 }
 
 .option h2 {
@@ -60,13 +73,7 @@ header, footer {
 
 /* Media queries for responsiveness */
 @media screen and (max-width: 768px) {
-    .options {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .option {
-        width: 100%;
-        max-width: 300px;
+        width: calc(50% - 20px); /* Adjust width for smaller screens */
     }
 }
