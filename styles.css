@@ -97,13 +97,17 @@ footer {
     width: 100%; /* Ensure the title takes up full width */
     font-size: large;
     color: white;
+    margin-top: 5%;
+    text-align: center; /* Center the text horizontally */
 }
+
 
 /* Styles for the image */
 .movie-list img, .series-list img {
-    width: 50%; /* Make images slightly smaller */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 50px; /* Add border radius for rounded corners */
+    width: 200px; /* Make images slightly smaller */
+    height: 250px; /* Maintain aspect ratio */
+    
+    border-radius: 45px; /* Add border radius for rounded corners */
 }
 
 /* Styles for the alphabet filter */
@@ -115,6 +119,7 @@ footer {
 .filter-btn {
     margin-right: 5px; /* Add some space between the filter buttons */
     border-radius: 20%;
+    font-size: larger;
 }
 
 .filter-btn:hover {
@@ -135,17 +140,6 @@ footer {
     border-radius: 5px;
     box-sizing: border-box;
     font-size: 12px;
-}
-
-/* Additional filter buttons */
-.filter-btn {
-    margin-right: 5px; /* Add some space between the filter buttons */
-    border-radius: 20%;
-}
-
-.filter-btn:hover {
-    background-color: aqua;
-    border-radius: 40%;
 }
 
 /* Responsive adjustments */
