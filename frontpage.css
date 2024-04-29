@@ -38,6 +38,28 @@ header, footer {
     text-decoration: none;
 }
 
+#navbar ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Ensure the list has no margin */
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Align items vertically */
+}
+#navbar a {
+    text-decoration: none; /* Remove underline from links */
+    color: white; /* Set text color to white */
+    background-color: #a3a7b3; /* Background color for the links */
+    padding: 10px 15px; /* Padding around the text */
+    border-radius: 20px; /* Rounded corners for the links */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    margin: 5px; /* Increase the space between links */
+}
+#navbar a:hover {
+    background-color: #020d0f;
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.5);
+    color: #00FF00;
+}
 .option {
     background-color: #0a46e9;
     color: #fff;
