@@ -162,12 +162,6 @@ header, footer {
     white-space: nowrap;
 }
 
-#scrolling-text-container {
-    animation: scroll-left 20s linear infinite;
-    display: inline-block;
-    padding-right: 10px; /* Add padding to prevent text from appearing immediately after scrolling ends */
-}
-
 @keyframes scroll-left {
     from {
         transform: translateX(100%);
