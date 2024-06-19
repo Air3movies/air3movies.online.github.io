@@ -156,12 +156,25 @@ header, footer {
             font-size: 10px;
         }
     }
+#scrolling-banner {
+    width: 100%; /* Adjust width as needed */
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#scrolling-text-container {
+    animation: scroll-left 20s linear infinite;
+    display: inline-block;
+    padding-right: 10px; /* Add padding to prevent text from appearing immediately after scrolling ends */
+}
+
 @keyframes scroll-left {
-    0% {
+    from {
         transform: translateX(100%);
     }
-    100% {
+    to {
         transform: translateX(-100%);
     }
 }
+
 
