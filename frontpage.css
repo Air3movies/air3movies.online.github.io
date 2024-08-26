@@ -170,5 +170,159 @@ header, footer {
         transform: translateX(-100%);
     }
 }
+/* General styles for comment section */
+#comment-section {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker semi-transparent background */
+    color: #fff; /* White text color */
+    padding: 20px; /* Padding around the section */
+    border-radius: 10px; /* Rounded corners */
+    margin-top: 20px; /* Space above the comment section */
+    width: 100%; /* Full width */
+    max-width: 800px; /* Maximum width */
+    margin: 0 auto; /* Center align */
+    box-shadow: 0 0 30px rgba(0, 200, 255, 0.5); /* Glow effect around the section */
+}
+
+#comment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#comment-input {
+    width: auto;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #333; /* Dark border */
+    margin-bottom: 10px;
+    background-color: #1e1e1e; /* Dark background for input */
+    color: #fff; /* White text color */
+    box-shadow: 0 0 40px rgba(0, 200, 255, 0.3); /* Glow effect inside input */
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000000; /* Background color */
+    color: #fff; /* White text color */
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px rgba(0, 200, 255, 0.5); /* Glow effect */
+}
+
+button:hover {
+    background-color: #020d0f; /* Darker background on hover */
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.8); /* Brighter glow effect */
+}
+
+#comments-display {
+    margin-top: 20px; /* Space above comments list */
+}
+
+#comments-scroll {
+    max-height: 300px; /* Fixed height for scrollable area */
+    overflow-y: auto; /* Enable vertical scroll */
+    border: 1px solid #333; /* Border around scroll area */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px;
+    background-color: #2a2a2a; /* Slightly lighter background for scroll area */
+}
+
+#comments-list {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+#comments-list li {
+    border-bottom: 1px solid #444; /* Darker border between comments */
+    padding: 10px 0; /* Padding around each comment */
+    font-size: 16px; /* Font size for comments */
+    color: #eee; /* Light text color */
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.3); /* Glow effect on comments */
+}
+
+/* Responsive adjustments */
+@media screen and (min-width: 1200px) {
+    #comment-section {
+        padding: 30px;
+    }
+
+    #comment-input {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    button {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    #comments-list li {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    #comment-section {
+        padding: 20px;
+    }
+
+    #comment-input {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    #comments-list li {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #comment-section {
+        padding: 15px;
+    }
+
+    #comment-input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #comments-list li {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #comment-section {
+        padding: 10px;
+    }
+
+    #comment-input {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    #comments-list li {
+        font-size: 12px;
+    }
+}
 
 
